@@ -4,7 +4,8 @@ import {
   Text,
   SafeAreaView,
   Image,
-  TouchableHighlight,
+  View,
+  TouchableNativeFeedback,
 } from 'react-native';
 
 export default function App() {
@@ -19,16 +20,11 @@ export default function App() {
         voluptatibus maxime sint officia hic, error perspiciatis ad! Temporibus,
         dolore deleniti.
       </Text>
-      <TouchableHighlight onPress={() => console.log('Tapped on image!')}>
-        <Image
-          fadeDuration={500}
-          source={{
-            width: 200,
-            height: 300,
-            uri: `https://picsum.photos/200/300`,
-          }}
-        />
-      </TouchableHighlight>
+      <TouchableNativeFeedback onPress={() => console.log('Tapped on image!')}>
+        <View
+          style={{ width: 200, height: 70, backgroundColor: 'dodgerblue' }}
+        ></View>
+      </TouchableNativeFeedback>
     </SafeAreaView>
   );
 }
