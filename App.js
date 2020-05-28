@@ -1,5 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView, Image } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  SafeAreaView,
+  Image,
+  TouchableWithoutFeedback,
+} from 'react-native';
 
 export default function App() {
   const handlePress = () => console.log('Text pressed!');
@@ -13,15 +19,16 @@ export default function App() {
         voluptatibus maxime sint officia hic, error perspiciatis ad! Temporibus,
         dolore deleniti.
       </Text>
-      <Image
-        blurRadius={1}
-        fadeDuration={500}
-        source={{
-          width: 200,
-          height: 300,
-          uri: `https://picsum.photos/200/300`,
-        }}
-      />
+      <TouchableWithoutFeedback onPress={() => console.log('Tapped on image!')}>
+        <Image
+          fadeDuration={500}
+          source={{
+            width: 200,
+            height: 300,
+            uri: `https://picsum.photos/200/300`,
+          }}
+        />
+      </TouchableWithoutFeedback>
     </SafeAreaView>
   );
 }
