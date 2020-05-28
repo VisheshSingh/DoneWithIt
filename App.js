@@ -13,7 +13,15 @@ export default function App() {
         voluptatibus maxime sint officia hic, error perspiciatis ad! Temporibus,
         dolore deleniti.
       </Text>
-      <Image fadeDuration={500} source={require('./assets/icon.png')} />
+      <Image
+        blurRadius={1}
+        fadeDuration={500}
+        source={{
+          width: 200,
+          height: 300,
+          uri: `https://picsum.photos/200/300`,
+        }}
+      />
     </SafeAreaView>
   );
 }
