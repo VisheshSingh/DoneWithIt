@@ -4,7 +4,7 @@ import {
   Text,
   SafeAreaView,
   Image,
-  TouchableWithoutFeedback,
+  TouchableOpacity,
 } from 'react-native';
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
         voluptatibus maxime sint officia hic, error perspiciatis ad! Temporibus,
         dolore deleniti.
       </Text>
-      <TouchableWithoutFeedback onPress={() => console.log('Tapped on image!')}>
+      <TouchableOpacity onPress={() => console.log('Tapped on image!')}>
         <Image
           fadeDuration={500}
           source={{
@@ -28,7 +28,7 @@ export default function App() {
             uri: `https://picsum.photos/200/300`,
           }}
         />
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
