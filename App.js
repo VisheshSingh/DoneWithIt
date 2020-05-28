@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, Image } from 'react-native';
 
 export default function App() {
   const handlePress = () => console.log('Text pressed!');
   return (
-    <View style={styles.container}>
-      <Text numberOfLines={2} onPress={handlePress}>
+    <SafeAreaView style={styles.container}>
+      <Text numberOfLines={2} onPress={handlePress} style={styles.text}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
         consequuntur, at ipsa debitis praesentium culpa tempore hic vel? Aliquam
         quasi ullam, ducimus delectus voluptate illum dolore aut eveniet quaerat
@@ -13,15 +13,19 @@ export default function App() {
         voluptatibus maxime sint officia hic, error perspiciatis ad! Temporibus,
         dolore deleniti.
       </Text>
-    </View>
+      <Image fadeDuration={500} source={require('./assets/icon.png')} />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'dodgerblue',
+    backgroundColor: '#333',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  text: {
+    color: '#fff',
   },
 });
