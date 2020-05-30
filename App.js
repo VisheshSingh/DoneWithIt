@@ -1,27 +1,24 @@
 import React from 'react';
 import {
+  Dimensions,
   StyleSheet,
   SafeAreaView,
-  Alert,
-  Button,
+  View,
+  Text,
   Platform,
   StatusBar,
 } from 'react-native';
 
 export default function App() {
+  console.log('Dimensions: ', Dimensions.get('screen'));
   const handlePress = () => console.log('Text pressed!');
   return (
     <SafeAreaView style={styles.container}>
-      <Button
-        color='orange'
-        title='click me'
-        onPress={() =>
-          Alert.alert('My title', 'My message', [
-            { text: 'Yes', onPress: () => console.log('Yes') },
-            { text: 'No', onPress: () => console.log('No') },
-          ])
-        }
-      />
+      <View
+        style={{ backgroundColor: 'dodgerblue', width: '50%', height: 150 }}
+      >
+        {/* <Text>DoneWithIt</Text> */}
+      </View>
     </SafeAreaView>
   );
 }
@@ -29,7 +26,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'lightgreen',
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
