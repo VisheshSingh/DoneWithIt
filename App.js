@@ -7,6 +7,7 @@ import ViewImageScreen from './src/screens/ViewImageScreen';
 import Card from './src/components/Card';
 import colors from './src/config/colors';
 import ListDetails from './src/components/ListDetails';
+import MessagesScreen from './src/screens/MessagesScreen';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
@@ -23,7 +24,7 @@ export default function App() {
         subTitle='$100'
         image={require('./assets/jacket.jpg')}
       /> */}
-      <ViewImageScreen />
+      <MessagesScreen />
     </View>
   );
 }
