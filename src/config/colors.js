@@ -5,4 +5,5 @@ export default {
   white: '#fff',
   cream: '#f8f4f4',
   grey: '#aaa',
+  light: '#eee',
 };
