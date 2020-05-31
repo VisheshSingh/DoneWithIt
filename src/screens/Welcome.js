@@ -25,18 +25,20 @@ const Welcome = () => {
         />
         <Text style={styles.tagLine}>Sell stuff, you don't need anymore!</Text>
       </View>
-      <AppButton
-        color={colors.primary}
-        btnText='Login'
-        propStyle={styles.loginBtn}
-        onPress={() => console.log('Login tapped!')}
-      />
-      <AppButton
-        color={colors.secondary}
-        btnText='Register'
-        propStyle={styles.registerBtn}
-        onPress={() => console.log('Register tapped!')}
-      />
+      <View style={styles.btnContainer}>
+        <AppButton
+          color={colors.primary}
+          btnText='Login'
+          propStyle={styles.loginBtn}
+          onPress={() => console.log('Login tapped!')}
+        />
+        <AppButton
+          color={colors.secondary}
+          btnText='Register'
+          propStyle={styles.registerBtn}
+          onPress={() => console.log('Register tapped!')}
+        />
+      </View>
     </ImageBackground>
   );
 };
@@ -59,14 +61,18 @@ const styles = StyleSheet.create({
     position: 'absolute',
     alignItems: 'center',
   },
+  btnContainer: {
+    padding: 20,
+    width: '100%',
+  },
   loginBtn: {
     height: 50,
-    width: '90%',
+    width: '100%',
     margin: 8,
   },
   registerBtn: {
     height: 50,
-    width: '90%',
+    width: '100%',
     margin: 8,
   },
   tagLine: {
