@@ -14,7 +14,12 @@ export default function App() {
           height: 100,
           borderWidth: 10,
           borderColor: 'royalblue',
-          borderRadius: 50,
+          elevation: 20,
+          // shadows don't work for android
+          shadowOffset: { width: 10, height: 10 },
+          shadowOpacity: 1,
+          shadowRadius: 10,
+          shadowColor: 'grey',
         }}
       ></View>
     </View>
