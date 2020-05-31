@@ -1,11 +1,20 @@
 import React from 'react';
-import { Text, StyleSheet, Image, ImageBackground, View } from 'react-native';
+import {
+  Text,
+  StyleSheet,
+  Image,
+  ImageBackground,
+  View,
+  Button,
+} from 'react-native';
 
 import colors from '../config/colors';
+import AppButton from '../components/AppButton';
 
 const Welcome = () => {
   return (
     <ImageBackground
+      blurRadius={3}
       source={require('../../assets/background.jpg')}
       style={styles.background}
     >
@@ -14,10 +23,18 @@ const Welcome = () => {
           source={require('../../assets/logo-red.png')}
           style={styles.logo}
         />
-        <Text>Sell stuff, you don't need anymore!</Text>
+        <Text style={styles.tagLine}>Sell stuff, you don't need anymore!</Text>
       </View>
-      <View style={styles.loginBtn}></View>
-      <View style={styles.registerBtn}></View>
+      <AppButton
+        color={colors.primary}
+        btnText='Login'
+        propStyle={styles.loginBtn}
+      />
+      <AppButton
+        color={colors.secondary}
+        btnText='Register'
+        propStyle={styles.registerBtn}
+      />
     </ImageBackground>
   );
 };
@@ -27,6 +44,7 @@ export default Welcome;
 const styles = StyleSheet.create({
   background: {
     flex: 1,
+    width: '100%',
     alignItems: 'center',
     justifyContent: 'flex-end',
   },
@@ -40,13 +58,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   loginBtn: {
-    height: 70,
-    width: '100%',
-    backgroundColor: colors.primary,
+    height: 50,
+    width: '90%',
+    margin: 8,
   },
   registerBtn: {
-    height: 70,
-    width: '100%',
-    backgroundColor: colors.secondary,
+    height: 50,
+    width: '90%',
+    margin: 8,
+  },
+  tagLine: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 10,
   },
 });

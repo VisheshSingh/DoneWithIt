@@ -10,7 +10,7 @@ YellowBox.ignoreWarnings(['Remote debugger']);
 export default function App() {
   return (
     <View style={styles.container}>
-      <MaterialCommunityIcons name='email' size={200} color='dodgerblue' />
+      <Welcome />
     </View>
   );
 }
