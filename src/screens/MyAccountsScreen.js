@@ -14,12 +14,14 @@ const initialOptions = [
     title: 'My Listings',
     iconName: 'format-list-bulleted',
     color: colors.primary,
+    size: 40,
   },
   {
     id: '2',
     title: 'My Messages',
     iconName: 'email',
     color: colors.secondary,
+    size: 40,
   },
 ];
 
@@ -40,6 +42,7 @@ const MyAccountsScreen = () => {
               iconName={item.iconName}
               bgColor={item.color}
               description={item.title}
+              size={item.size}
             />
           )}
           ItemSeparatorComponent={ListItemSeparator}

@@ -4,13 +4,13 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import colors from '../config/colors';
 
-const ListIcon = ({ iconName, description, bgColor }) => {
+const ListIcon = ({ iconName, description, bgColor, size = 40 }) => {
   return (
     <View style={styles.container}>
       <View style={{ backgroundColor: bgColor, borderRadius: 50 }}>
         <MaterialCommunityIcons
           name={iconName}
-          size={30}
+          size={size * 0.5}
           color='white'
           style={styles.icon}
         />
