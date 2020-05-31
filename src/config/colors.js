@@ -6,4 +6,5 @@ export default {
   cream: '#f8f4f4',
   grey: '#aaa',
   light: '#eee',
+  danger: '#f45252',
 };
