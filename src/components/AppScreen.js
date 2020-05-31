@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, Platform, StatusBar } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 
+import Constants from 'expo-constants';
+// console.log(Constants);
 const AppScreen = ({ children }) => {
   return <SafeAreaView style={styles.container}>{children}</SafeAreaView>;
 };
@@ -9,6 +11,6 @@ export default AppScreen;
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+    paddingTop: Constants.statusBarHeight,
   },
 });
