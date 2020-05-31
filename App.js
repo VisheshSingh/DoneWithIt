@@ -18,11 +18,12 @@ export default function App() {
         subTitle='$100'
         image={require('./assets/jacket.jpg')}
       /> */}
-      <ListDetails
+      {/* <ListDetails
         title='Red jacket for sale'
         subTitle='$100'
         image={require('./assets/jacket.jpg')}
-      />
+      /> */}
+      <ViewImageScreen />
     </View>
   );
 }
