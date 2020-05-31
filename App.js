@@ -6,6 +6,7 @@ import Welcome from './src/screens/Welcome';
 import ViewImageScreen from './src/screens/ViewImageScreen';
 import Card from './src/components/Card';
 import colors from './src/config/colors';
+import ListDetails from './src/components/ListDetails';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
@@ -17,7 +18,11 @@ export default function App() {
         subTitle='$100'
         image={require('./assets/jacket.jpg')}
       /> */}
-      <Welcome />
+      <ListDetails
+        title='Red jacket for sale'
+        subTitle='$100'
+        image={require('./assets/jacket.jpg')}
+      />
     </View>
   );
 }
