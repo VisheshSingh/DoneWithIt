@@ -7,4 +7,5 @@ export default {
   grey: '#aaa',
   light: '#eee',
   danger: '#f45252',
+  gold: '#ffe66d',
 };

@@ -8,6 +8,7 @@ import Card from './src/components/Card';
 import colors from './src/config/colors';
 import ListDetails from './src/components/ListDetails';
 import MessagesScreen from './src/screens/MessagesScreen';
+import MyAccountsScreen from './src/screens/MyAccountsScreen';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
@@ -24,7 +25,7 @@ export default function App() {
         subTitle='$100'
         image={require('./assets/jacket.jpg')}
       /> */}
-      <MessagesScreen />
+      <MyAccountsScreen />
     </View>
   );
 }
@@ -34,6 +35,6 @@ const styles = StyleSheet.create({
     flex: 1,
     // padding: 20,
     // paddingTop: 100,
-    backgroundColor: colors.cream,
+    backgroundColor: colors.light,
   },
 });

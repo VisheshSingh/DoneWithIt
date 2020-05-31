@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: 15,
     alignItems: 'center',
+    backgroundColor: colors.white,
   },
   image: {
     width: 50,
