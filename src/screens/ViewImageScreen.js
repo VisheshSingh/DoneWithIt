@@ -8,6 +8,8 @@ import {
   StatusBar,
 } from 'react-native';
 
+import colors from '../config/colors';
+
 const ViewImageScreen = () => {
   return (
     <View style={styles.container}>
@@ -30,7 +32,7 @@ export default ViewImageScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: colors.black,
   },
   iconContainer: {
     flexDirection: 'row',
@@ -40,12 +42,12 @@ const styles = StyleSheet.create({
   closeIcon: {
     width: 50,
     height: 50,
-    backgroundColor: '#fc5c65',
+    backgroundColor: colors.primary,
   },
   deleteIcon: {
     width: 50,
     height: 50,
-    backgroundColor: '#4ecdc4',
+    backgroundColor: colors.secondary,
   },
   image: {
     width: '100%',
