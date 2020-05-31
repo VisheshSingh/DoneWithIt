@@ -29,11 +29,13 @@ const Welcome = () => {
         color={colors.primary}
         btnText='Login'
         propStyle={styles.loginBtn}
+        onPress={() => console.log('Login tapped!')}
       />
       <AppButton
         color={colors.secondary}
         btnText='Register'
         propStyle={styles.registerBtn}
+        onPress={() => console.log('Register tapped!')}
       />
     </ImageBackground>
   );

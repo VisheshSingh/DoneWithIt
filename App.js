@@ -12,19 +12,21 @@ YellowBox.ignoreWarnings(['Remote debugger']);
 export default function App() {
   return (
     <View style={styles.container}>
-      <Card
+      {/* <Card
         title='Red jacket for sale!'
         subTitle='$100'
         image={require('./assets/jacket.jpg')}
-      />
+      /> */}
+      <Welcome />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
-    paddingTop: 100,
+    flex: 1,
+    // padding: 20,
+    // paddingTop: 100,
     backgroundColor: colors.cream,
   },
 });
