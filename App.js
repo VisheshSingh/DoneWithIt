@@ -4,21 +4,27 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Welcome from './src/screens/Welcome';
 import ViewImageScreen from './src/screens/ViewImageScreen';
+import Card from './src/components/Card';
+import colors from './src/config/colors';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Welcome />
+      <Card
+        title='Red jacket for sale!'
+        subTitle='$100'
+        image={require('./assets/jacket.jpg')}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    padding: 20,
+    paddingTop: 100,
+    backgroundColor: colors.cream,
   },
 });
