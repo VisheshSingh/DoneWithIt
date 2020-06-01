@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     padding: 15,
     backgroundColor: colors.light2,
+    alignItems: 'center',
   },
   iconRight: {
     marginRight: 10,
