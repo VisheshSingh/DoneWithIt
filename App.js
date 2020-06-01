@@ -10,6 +10,7 @@ import ListDetails from './src/components/ListDetails';
 import MessagesScreen from './src/screens/MessagesScreen';
 import MyAccountsScreen from './src/screens/MyAccountsScreen';
 import ListingsScreen from './src/screens/ListingsScreen';
+import AppTextInput from './src/components/AppTextInput';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
@@ -26,7 +27,7 @@ export default function App() {
         subTitle='$100'
         image={require('./assets/jacket.jpg')}
       /> */}
-      <ListingsScreen />
+      <AppTextInput icon='email' placeholder='Email' />
     </View>
   );
 }
