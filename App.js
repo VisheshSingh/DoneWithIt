@@ -24,6 +24,7 @@ const categories = [
 
 export default function App() {
   const [isNew, setIsNew] = useState(false);
+  const [category, setCategory] = useState();
   return (
     <View style={styles.container}>
       {/* <Card
@@ -42,7 +43,13 @@ export default function App() {
           onValueChange={(newValue) => setIsNew(newValue)}
         />
         {isNew && (
-          <AppPicker items={categories} icon='apps' placeholder='Category' />
+          <AppPicker
+            selectedItem={category}
+            onSelectItem={(newItem) => setCategory(newItem)}
+            items={categories}
+            icon='apps'
+            placeholder='Category'
+          />
         )}
         {isNew && <AppTextInput icon='email' placeholder='Email' />}
       </AppScreen>

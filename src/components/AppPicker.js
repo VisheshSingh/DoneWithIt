@@ -14,7 +14,13 @@ import colors from '../config/colors';
 import AppScreen from './AppScreen';
 import PickerItem from './PickerItem';
 
-const AppPicker = ({ icon, items, placeholder }) => {
+const AppPicker = ({
+  icon,
+  items,
+  onSelectItem,
+  selectedItem,
+  placeholder,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <Fragment>
@@ -28,7 +34,9 @@ const AppPicker = ({ icon, items, placeholder }) => {
               style={styles.iconRight}
             />
           )}
-          <Text style={styles.textInput}>{placeholder}</Text>
+          <Text style={styles.textInput}>
+            {selectedItem ? selectedItem.label : placeholder}
+          </Text>
           <MaterialCommunityIcons
             name='chevron-down'
             size={20}
@@ -47,7 +55,10 @@ const AppPicker = ({ icon, items, placeholder }) => {
             renderItem={({ item }) => (
               <PickerItem
                 label={item.label}
-                onPress={() => console.log(item)}
+                onPress={() => {
+                  setIsModalOpen(false);
+                  onSelectItem(item);
+                }}
               />
             )}
           />
