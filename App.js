@@ -35,8 +35,8 @@ export default function App() {
           value={isNew}
           onValueChange={(newValue) => setIsNew(newValue)}
         />
-        {isNew && <AppTextInput icon='email' placeholder='Email' />}
         {isNew && <AppPicker icon='apps' placeholder='Category' />}
+        {isNew && <AppTextInput icon='email' placeholder='Email' />}
       </AppScreen>
     </View>
   );
