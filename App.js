@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, StyleSheet, YellowBox } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, YellowBox, Switch } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Welcome from './src/screens/Welcome';
@@ -15,6 +15,7 @@ import AppTextInput from './src/components/AppTextInput';
 YellowBox.ignoreWarnings(['Remote debugger']);
 
 export default function App() {
+  const [isNew, setIsNew] = useState(false);
   return (
     <View style={styles.container}>
       {/* <Card
@@ -28,6 +29,7 @@ export default function App() {
         image={require('./assets/jacket.jpg')}
       /> */}
       <AppTextInput icon='email' placeholder='Email' />
+      <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} />
     </View>
   );
 }
