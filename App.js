@@ -11,6 +11,7 @@ import MessagesScreen from './src/screens/MessagesScreen';
 import MyAccountsScreen from './src/screens/MyAccountsScreen';
 import ListingsScreen from './src/screens/ListingsScreen';
 import AppTextInput from './src/components/AppTextInput';
+import AppScreen from './src/components/AppScreen';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
@@ -28,8 +29,13 @@ export default function App() {
         subTitle='$100'
         image={require('./assets/jacket.jpg')}
       /> */}
-      <AppTextInput icon='email' placeholder='Email' />
-      <Switch value={isNew} onValueChange={(newValue) => setIsNew(newValue)} />
+      <AppScreen>
+        <Switch
+          value={isNew}
+          onValueChange={(newValue) => setIsNew(newValue)}
+        />
+        {isNew && <AppTextInput icon='email' placeholder='Email' />}
+      </AppScreen>
     </View>
   );
 }
