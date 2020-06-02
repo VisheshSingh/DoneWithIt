@@ -12,6 +12,7 @@ import MyAccountsScreen from './src/screens/MyAccountsScreen';
 import ListingsScreen from './src/screens/ListingsScreen';
 import AppTextInput from './src/components/AppTextInput';
 import AppScreen from './src/components/AppScreen';
+import AppPicker from './src/components/AppPicker';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
@@ -35,6 +36,7 @@ export default function App() {
           onValueChange={(newValue) => setIsNew(newValue)}
         />
         {isNew && <AppTextInput icon='email' placeholder='Email' />}
+        {isNew && <AppPicker icon='apps' placeholder='Category' />}
       </AppScreen>
     </View>
   );
