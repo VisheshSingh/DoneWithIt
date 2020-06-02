@@ -16,6 +16,12 @@ import AppPicker from './src/components/AppPicker';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
+const categories = [
+  { label: 'Furniture', value: 1 },
+  { label: 'Clothing', value: 2 },
+  { label: 'garage', value: 3 },
+];
+
 export default function App() {
   const [isNew, setIsNew] = useState(false);
   return (
@@ -35,7 +41,9 @@ export default function App() {
           value={isNew}
           onValueChange={(newValue) => setIsNew(newValue)}
         />
-        {isNew && <AppPicker icon='apps' placeholder='Category' />}
+        {isNew && (
+          <AppPicker items={categories} icon='apps' placeholder='Category' />
+        )}
         {isNew && <AppTextInput icon='email' placeholder='Email' />}
       </AppScreen>
     </View>
