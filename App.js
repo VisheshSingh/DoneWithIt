@@ -13,6 +13,7 @@ import ListingsScreen from './src/screens/ListingsScreen';
 import AppTextInput from './src/components/AppTextInput';
 import AppScreen from './src/components/AppScreen';
 import AppPicker from './src/components/AppPicker';
+import LoginScreen from './src/screens/LoginScreen';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
@@ -37,7 +38,7 @@ export default function App() {
         subTitle='$100'
         image={require('./assets/jacket.jpg')}
       /> */}
-      <AppScreen>
+      {/* <AppScreen>
         <Switch
           value={isNew}
           onValueChange={(newValue) => setIsNew(newValue)}
@@ -52,7 +53,8 @@ export default function App() {
           />
         )}
         {isNew && <AppTextInput icon='email' placeholder='Email' />}
-      </AppScreen>
+      </AppScreen> */}
+      <LoginScreen />
     </View>
   );
 }
@@ -60,7 +62,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // padding: 20,
+    padding: 10,
     // paddingTop: 100,
     backgroundColor: colors.light,
   },
