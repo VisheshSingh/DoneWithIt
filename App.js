@@ -14,6 +14,7 @@ import AppTextInput from './src/components/AppTextInput';
 import AppScreen from './src/components/AppScreen';
 import AppPicker from './src/components/AppPicker';
 import LoginScreen from './src/screens/LoginScreen';
+import RegisterScreen from './src/screens/RegisterScreen';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
@@ -54,7 +55,8 @@ export default function App() {
         )}
         {isNew && <AppTextInput icon='email' placeholder='Email' />}
       </AppScreen> */}
-      <LoginScreen />
+      {/* <LoginScreen /> */}
+      <RegisterScreen />
     </View>
   );
 }
