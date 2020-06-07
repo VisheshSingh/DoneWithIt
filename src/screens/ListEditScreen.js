@@ -31,16 +31,16 @@ const ListEditScreen = () => {
           description: '',
           category: null,
         }}
-        validationSchema={validationSchema}
         onSubmit={(values) => {
           console.log(values);
           Keyboard.dismiss();
         }}
+        validationSchema={validationSchema}
       >
         <AppFormField maxLength={255} name='title' placeholder='Title' />
         <AppFormField
           maxLength={8}
-          name='proce'
+          name='price'
           placeholder='Price'
           keyboardType='numeric'
         />
