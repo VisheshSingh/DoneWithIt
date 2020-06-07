@@ -38,6 +38,7 @@ const MessagesScreen = (props) => {
             subTitle={item.description}
             image={item.image}
             onPress={() => console.log('List item: ', item)}
+            showChevrons
             renderRightActions={() => (
               <ListItemDeleteAction onPress={() => handleDelete(item)} />
             )}

@@ -17,6 +17,7 @@ import LoginScreen from './src/screens/LoginScreen';
 import RegisterScreen from './src/screens/RegisterScreen';
 import AppFormPicker from './src/components/AppFormPicker';
 import ListEditScreen from './src/screens/ListEditScreen';
+import ListItem from './src/components/ListItem';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
@@ -59,7 +60,8 @@ export default function App() {
       </AppScreen> */}
       {/* <LoginScreen /> */}
       {/* <RegisterScreen /> */}
-      <ListEditScreen />
+      {/* <ListEditScreen /> */}
+      <MessagesScreen />
     </View>
   );
 }
@@ -67,7 +69,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
+    paddingVertical: 10,
     // paddingTop: 100,
     backgroundColor: colors.light,
   },
