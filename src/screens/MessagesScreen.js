@@ -9,14 +9,17 @@ import ListItemDeleteAction from '../components/ListItemDeleteAction';
 const initialMessages = [
   {
     id: '1',
-    title: 'T1',
-    description: 'D1',
+    title:
+      'This is going to be a very long title but will get limited to just one line',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur eum impedit, minima molestiae eligendi, itaque quidem molestias ipsam, necessitatibus iste harum reprehenderit qui saepe. Porro sapiente a similique rerum voluptatum?',
     image: require('../../assets/mosh.jpg'),
   },
   {
     id: '2',
     title: 'T2',
-    description: 'D2',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur eum impedit, minima molestiae eligendi, itaque quidem molestias ipsam, necessitatibus iste harum reprehenderit qui saepe. Porro sapiente a similique rerum voluptatum?',
     image: require('../../assets/mosh.jpg'),
   },
 ];

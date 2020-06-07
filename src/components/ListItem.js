@@ -25,8 +25,12 @@ const ListItem = ({
         <View style={styles.container}>
           <Image source={image} style={styles.image} />
           <View style={styles.textContainer}>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.subTitle}>{subTitle}</Text>
+            <Text style={styles.title} numberOfLines={1}>
+              {title}
+            </Text>
+            <Text style={styles.subTitle} numberOfLines={3}>
+              {subTitle}
+            </Text>
           </View>
           {showChevrons && (
             <MaterialCommunityIcons
