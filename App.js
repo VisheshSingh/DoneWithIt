@@ -16,6 +16,7 @@ import AppPicker from './src/components/AppPicker';
 import LoginScreen from './src/screens/LoginScreen';
 import RegisterScreen from './src/screens/RegisterScreen';
 import AppFormPicker from './src/components/AppFormPicker';
+import ListEditScreen from './src/screens/ListEditScreen';
 
 YellowBox.ignoreWarnings(['Remote debugger']);
 
@@ -58,7 +59,7 @@ export default function App() {
       </AppScreen> */}
       {/* <LoginScreen /> */}
       {/* <RegisterScreen /> */}
-      <AppFormPicker />
+      <ListEditScreen />
     </View>
   );
 }

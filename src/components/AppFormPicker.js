@@ -1,13 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { Text } from 'react-native';
 import AppPicker from './AppPicker';
 import { useFormikContext } from 'formik';
-
-const categories = [
-  { label: 'Furniture', value: 1 },
-  { label: 'Clothing', value: 2 },
-  { label: 'garage', value: 3 },
-];
 
 const AppFormPicker = ({ items, name, placeholder }) => {
   const { errors, setFieldValue, touched, values } = useFormikContext();
@@ -26,5 +20,3 @@ const AppFormPicker = ({ items, name, placeholder }) => {
 };
 
 export default AppFormPicker;
-
-const styles = StyleSheet.create({});
