@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 import AppPicker from './AppPicker';
 import { useFormikContext } from 'formik';
 
-const AppFormPicker = ({ items, name, placeholder }) => {
+const AppFormPicker = ({ items, name, placeholder, width }) => {
   const { errors, setFieldValue, touched, values } = useFormikContext();
 
   return (
@@ -13,6 +13,7 @@ const AppFormPicker = ({ items, name, placeholder }) => {
         items={items}
         placeholder={placeholder}
         selectedItem={values[name]}
+        width={width}
       />
       {touched[name] && <Text style={{ color: 'red' }}>{errors[name]}</Text>}
     </>

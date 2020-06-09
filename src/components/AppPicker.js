@@ -20,12 +20,13 @@ const AppPicker = ({
   onSelectItem,
   selectedItem,
   placeholder,
+  width = '100%',
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <Fragment>
       <TouchableWithoutFeedback onPress={() => setIsModalOpen(true)}>
-        <View style={styles.container}>
+        <View style={[styles.container, { width }]}>
           {icon && (
             <MaterialCommunityIcons
               name={icon}
@@ -75,7 +76,6 @@ export default AppPicker;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    width: '100%',
     marginVertical: 8,
     borderRadius: 50,
     padding: 15,

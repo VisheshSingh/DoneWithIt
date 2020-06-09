@@ -60,8 +60,8 @@ export default function App() {
       </AppScreen> */}
       {/* <LoginScreen /> */}
       {/* <RegisterScreen /> */}
-      {/* <ListEditScreen /> */}
-      <MessagesScreen />
+      <ListEditScreen />
+      {/* <MessagesScreen /> */}
     </View>
   );
 }
@@ -69,7 +69,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingVertical: 10,
+    padding: 10,
     // paddingTop: 100,
     backgroundColor: colors.light,
   },
