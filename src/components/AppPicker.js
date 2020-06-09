@@ -76,7 +76,7 @@ export default AppPicker;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    marginVertical: 8,
+    // marginVertical: 8,
     borderRadius: 50,
     padding: 15,
     backgroundColor: colors.light2,
