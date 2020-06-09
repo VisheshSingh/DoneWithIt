@@ -7,7 +7,12 @@ import colors from '../config/colors';
 const ListIcon = ({ iconName, description, bgColor, size = 40 }) => {
   return (
     <View style={styles.container}>
-      <View style={{ backgroundColor: bgColor, borderRadius: 50 }}>
+      <View
+        style={{
+          backgroundColor: bgColor,
+          borderRadius: 50,
+        }}
+      >
         <MaterialCommunityIcons
           name={iconName}
           size={size * 0.5}
@@ -15,7 +20,9 @@ const ListIcon = ({ iconName, description, bgColor, size = 40 }) => {
           style={styles.icon}
         />
       </View>
-      <Text style={{ marginHorizontal: 8 }}>{description}</Text>
+      {description && (
+        <Text style={{ marginHorizontal: 8 }}>{description}</Text>
+      )}
     </View>
   );
 };
@@ -25,9 +32,9 @@ export default ListIcon;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
-    flexDirection: 'row',
-    padding: 15,
-    alignItems: 'center',
+    // flexDirection: 'row',
+    padding: 10,
+    // alignItems: 'center',
   },
   icon: {
     padding: 10,
