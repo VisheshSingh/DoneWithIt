@@ -7,6 +7,7 @@ import AppForm from '../components/AppForm';
 import AppFormField from '../components/AppFormField';
 import AppFormPicker from '../components/AppFormPicker';
 import SubmitButton from '../components/SubmitButton';
+import CategoryPickerItem from '../components/CategoryPickerItem';
 
 const categories = [
   { label: 'Furniture', value: 1 },
@@ -48,6 +49,7 @@ const ListEditScreen = () => {
         <AppFormPicker
           items={categories}
           name='category'
+          PickerItemComponent={CategoryPickerItem}
           placeholder='Category'
           width='50%'
         />
